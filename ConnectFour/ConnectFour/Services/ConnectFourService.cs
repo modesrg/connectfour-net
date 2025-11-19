@@ -47,7 +47,7 @@ public class ConnectFourService(IConnectFourRepository connectFourRepository) : 
         return false;
     }
 
-    private int CountInDirection(BoardGrid board, int col, int row, int dCol, int dRow, string color)
+    private int CountInDirection(BoardGrid board, int col, int row, int dCol, int dRow, string playedColor)
     {
         var cols = board.Cells.GetLength(0);
         var rows = board.Cells.GetLength(1);
@@ -62,7 +62,7 @@ public class ConnectFourService(IConnectFourRepository connectFourRepository) : 
                 break;
 
             var value = board.Cells[c, r];
-            if (value is null || !value.Equals(color, StringComparison.OrdinalIgnoreCase))
+            if (value is null || !value.Equals(playedColor, StringComparison.OrdinalIgnoreCase))
                 break;
 
             streak++;

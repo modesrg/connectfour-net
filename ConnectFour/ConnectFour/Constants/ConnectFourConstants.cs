@@ -20,7 +20,7 @@ public class ConnectFourConstants
     public struct CountDirection
     {
         public static (int dCol, int dRow) Horizontal = (1, 0);
-        public static (int dCol, int dRow) Vertical = (1, 0);
+        public static (int dCol, int dRow) Vertical = (0, 1);
         public static (int dCol, int dRow) Asceding = (1, 1);
         public static (int dCol, int dRow) Descending = (1, -1);
 
